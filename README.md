@@ -25,10 +25,6 @@ A **React application** built with **Vite**, **Redux Toolkit**, and **React Rout
 ## 📁 Project Structure (High Level)
 
 ```
-
-## 📁 Project Structure (High Level)
-
-```
 product-viewer/
 ├── public/
 ├── src/
