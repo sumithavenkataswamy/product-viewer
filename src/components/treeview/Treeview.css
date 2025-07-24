@@ -1,0 +1,44 @@
+.tree-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%; /* take full available width */
+    max-width: 100%; /* override any previous max-width */
+    background-color: white;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0; /* remove auto centering margins if any */
+  }
+  
+  .tree-header {
+    font-weight: 600;
+    padding: 16px;
+    border-bottom: 1px solid #d9e2ec;
+    background-color: #f0f4f8;
+  }
+  
+  .tree-list-item {
+    background-color: #f5f7f9;
+    border-bottom: 1px solid #d9e2ec;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .tree-list-item:hover {
+    background-color: #e7eff7;
+  }
+  
+  .tree-list-item-icon {
+    min-width: 30px;
+    cursor: pointer;
+  }
+  
+  .tree-checkbox {
+    padding: 4px;
+  }
+  
+  .tree-indent {
+    display: inline-block;
+    width: 20px;
+  }
+  
