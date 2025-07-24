@@ -16,43 +16,10 @@ import {
   ExpandMore,
 } from '@mui/icons-material';
 import './treeview.css';
+import type { TreeNode, TreeviewProps } from '../models/TreeNode';
 
-interface TreeNode {
-  id: string;
-  label: string;
-  children?: TreeNode[];
-}
 
-const data: TreeNode[] = [
-  {
-    id: '1',
-    label: 'Industries',
-    children: [
-      {
-        id: '1-1',
-        label: 'Appliances and Electronics',
-        children: [
-          {
-            id: '1-1-1',
-            label: 'Consumer Appliances',
-            children: [
-              {
-                id: '1-1-1-1',
-                label: 'Major Appliances',
-                children: [
-                  { id: '1-1-1-1-1', label: 'Built-In Major Appliances' },
-                  { id: '1-1-1-1-2', label: 'Freestanding Major Appliances' },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-];
-
-function Treeview() {
+const Treeview: React.FC<TreeviewProps> = ({ data = [] }) => {
   const [expanded, setExpanded] = useState<string[]>([]);
   const [checked, setChecked] = useState<string[]>([]);
   const [search, setSearch] = useState<string>('');
@@ -75,7 +42,7 @@ function Treeview() {
       const matchedIds = findMatchingNodes(data, search);
       setExpanded(matchedIds);
     }
-  }, [search]);
+  }, [search, data]);
 
   const handleToggle = (id: string) => {
     setExpanded((prev) =>
@@ -120,7 +87,6 @@ function Treeview() {
     });
   };
 
-  // 🔥 Remove selected item from checked list
   const handleRemoveSelected = (id: string) => {
     const node = findNodeById(data, id);
     if (!node) return;
@@ -209,7 +175,6 @@ function Treeview() {
         style={{ marginBottom: 16 }}
       />
 
-      {/* 🔥 Display selected items with remove option */}
       <Box sx={{ mb: 2 }}>
         <Typography variant="subtitle2">Selected Items:</Typography>
         {selectedItems.length > 0 ? (
@@ -236,6 +201,6 @@ function Treeview() {
       </div>
     </div>
   );
-}
+};
 
 export default React.memo(Treeview);
