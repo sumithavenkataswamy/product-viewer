@@ -3,6 +3,7 @@ import HeaderLayout from '../header-layout/HeaderLayout';
 import Industries from '../industries/Industries';
 import Channel from '../channel/channel';
 import Companies from '../companies/Companies';
+import '../../styles/global.css';
 
 function App() {
   return (

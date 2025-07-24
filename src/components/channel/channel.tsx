@@ -1,7 +1,10 @@
 import React from 'react';
+import PageLayout from '../page-layout/PageLayout';
 
 const Channel: React.FC = () => {
-  return <div><h2>Channel Page</h2></div>;
+  return <PageLayout
+  title="Channel Page" children={undefined}>
+</PageLayout>
 };
 
 export default Channel;

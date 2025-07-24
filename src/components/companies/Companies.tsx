@@ -1,7 +1,10 @@
 import React from 'react';
+import PageLayout from '../page-layout/PageLayout';
 
 const Companies: React.FC = () => {
-  return <div><h2>Company Page</h2></div>;
+  return <PageLayout
+    title="Companies Management" children={undefined}>
+  </PageLayout>
 };
 
 export default Companies;
