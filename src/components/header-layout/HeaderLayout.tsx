@@ -24,7 +24,7 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ children }) => {
           {!collapsed && (
             <div className="logo-container">
               <img src="/logo192.png" alt="Logo" className="company-logo" />
-              <span className="company-name">My Company</span>
+              <span className="company-name">Passport</span>
             </div>
           )}
         </div>

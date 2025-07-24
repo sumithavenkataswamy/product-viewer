@@ -1,0 +1,29 @@
+.industries-container {
+    padding: 32px;
+    background: linear-gradient(180deg, #f4f7fb 0%, #e9eff5 100%);
+    min-height: 100vh;
+  }
+  
+  .industries-header {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  
+  .industries-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .industries-header p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .industries-treeview {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    padding: 24px;
+  }
+  
