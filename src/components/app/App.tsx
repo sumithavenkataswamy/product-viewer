@@ -1,11 +1,22 @@
-import Treeview from "../treeview/Treeview";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HeaderLayout from '../header-layout/HeaderLayout';
+import Industries from '../industries/Industries';
+import Channel from '../channel/channel';
+import Companies from '../companies/Companies';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div style={{ width: '100%' }}>
-  <Treeview />
-</div>
+    <Router>
+      <HeaderLayout>
+        <Routes>
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/channel" element={<Channel />} />
+          <Route path="/companies" element={<Companies />} />
+          <Route path="*" element={<Industries />}/>
+        </Routes>
+      </HeaderLayout>
+    </Router>
   );
 }
 
-export default App
+export default App;
